@@ -19,14 +19,6 @@ L'utilisation de cette approche permet de développer des systèmes de design co
 
 ## Premiers pas
 
-> Ce package est en cours de développement, il n'est donc pas encore téléchargeable via un gestionnaire de packages. Pour bénéficier des composants, vous devez utiliser une instance du package générée localement, tel que ci-dessous.
->
-> ```json
-> {
->   "@ogea12/design-system": "file:../design-system"
-> }
-> ```
-
 ### Installation
 
 Pour utiliser le package, vous devez d'abord l'intégrer dans votre projet.
@@ -36,6 +28,16 @@ npm install @ogea12/design-system
 
 # Assurez-vous également d'installer les packages suivants
 npm install react react-dom
+```
+
+> Ce package est en cours de développement, il n'est donc pas encore téléchargeable via un gestionnaire de packages. Pour bénéficier des composants, vous devez utiliser une instance du package générée localement, tel que ci-dessous.
+
+```jsonc
+// package.json
+
+{
+  "@ogea12/design-system": "file:../design-system",
+}
 ```
 
 ### Utilisation
