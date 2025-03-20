@@ -36,7 +36,9 @@ npm install react react-dom
 // package.json
 
 {
-  "@ogea12/design-system": "file:../design-system",
+  "dependencies": {
+    "@ogea12/design-system": "file:../design-system",
+  },
 }
 ```
 
