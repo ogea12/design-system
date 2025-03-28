@@ -1,3 +1,5 @@
+import 'virtual:uno.css'
+
 import type { Preview } from '@storybook/react'
 
 const preview: Preview = {
@@ -10,6 +12,7 @@ const preview: Preview = {
     },
     layout: 'centered',
   },
+  tags: ['autodocs'],
 }
 
 export default preview
