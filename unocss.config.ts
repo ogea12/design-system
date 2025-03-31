@@ -1,9 +1,9 @@
 import { defineConfig, presetWebFonts, presetWind3, transformerVariantGroup } from 'unocss'
 
-import { colors } from './src/styles'
+import { colors, fontSize } from './src/styles'
 
 export default defineConfig({
-  theme: { colors },
+  theme: { colors, fontSize },
   content: { filesystem: ['./src/**/*.tsx'] },
   presets: [
     presetWind3({ dark: 'class' }),
