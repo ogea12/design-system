@@ -1,6 +1,6 @@
 import { defineConfig, presetWebFonts, presetWind3, transformerVariantGroup } from 'unocss'
 
-import { colors, fontSize } from './src/styles'
+import { colors, fontSize } from './src/tokens'
 
 export default defineConfig({
   theme: { colors, fontSize },
