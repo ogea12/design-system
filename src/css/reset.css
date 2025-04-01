@@ -1,0 +1,18 @@
+/*
+  Custom CSS reset to apply to all Markdown files.
+  It partially resets global styles to avoid some display issues.
+*/
+
+img {
+  display: inline-block;
+}
+
+ol {
+  list-style: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
