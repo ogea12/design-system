@@ -3,17 +3,30 @@ import type { FunctionComponent, ReactNode } from 'react'
 import { Field as ArkField } from '@ark-ui/react/field'
 import { useEffect, useState } from 'react'
 
-export interface FieldProps {
-  /** The content that will be displayed inside the field. */
+export interface FieldProps extends Omit<ArkField.RootBaseProps, 'invalid'> {
+  /**
+   * The content of the field.
+   */
   children: ReactNode
 
-  /** The indicator to signify that the field is disabled. */
+  /**
+   * Indicates whether the field is required.
+   */
+  required?: boolean
+
+  /**
+   * Indicates whether the field is disabled.
+   */
   disabled?: boolean
 
-  /** The text to display when an error has occurred. */
+  /**
+   * The text to display when an error occurs.
+   */
   errorText?: string
 
-  /** The text to display to help users. */
+  /**
+   * The text to display to help users.
+   */
   helperText?: string
 }
 
@@ -22,9 +35,9 @@ export interface FieldProps {
  */
 export const Field: FunctionComponent<FieldProps> = ({
   children,
-  disabled = false,
   errorText,
   helperText,
+  ...rest
 }) => {
   const [invalid, setInvalid] = useState(false)
 
@@ -33,11 +46,13 @@ export const Field: FunctionComponent<FieldProps> = ({
   }, [errorText])
 
   return (
-    <ArkField.Root className="flex flex-col gap-y-1" disabled={disabled} invalid={invalid}>
+    <ArkField.Root className="flex flex-col gap-y-1" invalid={invalid} {...rest}>
       {children}
-      <ArkField.ErrorText className="text-(2xs danger-700) font-sans">
-        {errorText}
-      </ArkField.ErrorText>
+      {errorText && (
+        <ArkField.ErrorText className="text-(2xs danger-700) font-sans">
+          {errorText}
+        </ArkField.ErrorText>
+      )}
       {!errorText && helperText && (
         <ArkField.HelperText className="text-(2xs neutral-600) font-sans">
           {helperText}
