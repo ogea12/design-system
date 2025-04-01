@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import type { FunctionComponent, ReactNode } from 'react'
 
 import { Field as ArkField } from '@ark-ui/react/field'
 import { useEffect, useState } from 'react'
@@ -6,6 +6,9 @@ import { useEffect, useState } from 'react'
 export interface FieldProps {
   /** The content that will be displayed inside the field. */
   children: ReactNode
+
+  /** The indicator to signify that the field is disabled. */
+  disabled?: boolean
 
   /** The text to display when an error has occurred. */
   errorText?: string
@@ -17,9 +20,12 @@ export interface FieldProps {
 /**
  * A `Field` component for form inputs with error and helper text support.
  */
-export function Field(props: FieldProps) {
-  const { children, errorText, helperText } = props
-
+export const Field: FunctionComponent<FieldProps> = ({
+  children,
+  disabled = false,
+  errorText,
+  helperText,
+}) => {
   const [invalid, setInvalid] = useState(false)
 
   useEffect(() => {
@@ -27,7 +33,7 @@ export function Field(props: FieldProps) {
   }, [errorText])
 
   return (
-    <ArkField.Root invalid={invalid}>
+    <ArkField.Root className="flex flex-col gap-y-1" disabled={disabled} invalid={invalid}>
       {children}
       <ArkField.ErrorText className="text-(2xs danger-700) font-sans">
         {errorText}

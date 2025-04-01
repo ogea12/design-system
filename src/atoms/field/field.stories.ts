@@ -8,6 +8,7 @@ const meta = {
   title: 'Atoms/Field',
   component: Field,
   args: { children: createElement('div') },
+  argTypes: { children: { table: { disable: true } } },
 } satisfies Meta<typeof Field>
 
 type Story = StoryObj<typeof meta>
