@@ -19,6 +19,11 @@
       "types": "./build/atoms/field/index.d.ts",
       "import": "./build/atoms/field/index.js",
       "require": "./build/atoms/field/index.cjs"
+    },
+    "./input": {
+      "types": "./build/molecules/input/index.d.ts",
+      "import": "./build/molecules/input/index.js",
+      "require": "./build/molecules/input/index.cjs"
     }
   },
   "scripts": {
