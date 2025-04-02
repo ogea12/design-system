@@ -29,6 +29,11 @@
       "types": "./build/molecules/pin_input/index.d.ts",
       "import": "./build/molecules/pin_input/index.js",
       "require": "./build/molecules/pin_input/index.cjs"
+    },
+    "./textarea": {
+      "types": "./build/molecules/textarea/index.d.ts",
+      "import": "./build/molecules/textarea/index.js",
+      "require": "./build/molecules/textarea/index.cjs"
     }
   },
   "scripts": {
