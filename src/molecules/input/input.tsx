@@ -21,12 +21,12 @@ export interface InputProps extends ArkField.RootBaseProps {
   placeholder?: string
 
   /**
-   * Indicates whether the field is required.
+   * Indicates whether the input is required.
    */
   required?: boolean
 
   /**
-   * Indicates whether the field is disabled.
+   * Indicates whether the input is disabled.
    */
   disabled?: boolean
 
@@ -67,6 +67,7 @@ export const Input: FunctionComponent<InputProps> = ({
         uno-disabled="bg-neutral-200 text-neutral-500 cursor-not-allowed border-neutral-200"
         uno-focus="border-duck-300"
         uno-hover="border-duck-300"
+        uno-placeholder="text-neutral-500"
       />
     </Field>
   )
