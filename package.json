@@ -24,6 +24,11 @@
       "types": "./build/molecules/input/index.d.ts",
       "import": "./build/molecules/input/index.js",
       "require": "./build/molecules/input/index.cjs"
+    },
+    "./pin-input": {
+      "types": "./build/molecules/pin_input/index.d.ts",
+      "import": "./build/molecules/pin_input/index.js",
+      "require": "./build/molecules/pin_input/index.cjs"
     }
   },
   "scripts": {
