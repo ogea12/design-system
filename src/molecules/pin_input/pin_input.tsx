@@ -84,13 +84,9 @@ export const PinInput: FunctionComponent<PinInputProps> = ({
         >
           {Array.from({ length: count }).map((_, index) => (
             <ArkPinInput.Input
-              className="border border-neutral-300 rounded-lg px-4 py-2 text-(center sm neutral-700) font-sans outline-none transition-colors"
+              className="border border-neutral-300 rounded-lg px-4 py-2 text-(center sm neutral-700) font-sans outline-none transition-colors disabled:(cursor-not-allowed border-neutral-200 bg-neutral-200 text-neutral-500) data-[invalid]:border-danger-700 focus:border-duck-300 hover:border-duck-300 placeholder:text-neutral-500"
               index={index}
               key={index}
-              uno-disabled="bg-neutral-200 border-neutral-200 text-neutral-500 cursor-not-allowed"
-              uno-focus="border-duck-300"
-              uno-hover="border-duck-300"
-              uno-placeholder="text-neutral-500"
             />
           ))}
         </ArkPinInput.Control>

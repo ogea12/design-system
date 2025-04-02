@@ -1,10 +1,4 @@
-import {
-  defineConfig,
-  presetAttributify,
-  presetWebFonts,
-  presetWind3,
-  transformerVariantGroup,
-} from 'unocss'
+import { defineConfig, presetWebFonts, presetWind3, transformerVariantGroup } from 'unocss'
 
 import { colors, fontSize } from './src/tokens.js'
 
@@ -16,11 +10,6 @@ export default defineConfig({
     presetWebFonts({
       provider: 'bunny',
       fonts: { sans: 'Albert Sans', mono: 'Barlow Condensed' },
-    }),
-    presetAttributify({
-      prefix: 'uno-',
-      prefixedOnly: true,
-      nonValuedAttribute: false,
     }),
   ],
   transformers: [transformerVariantGroup()],
