@@ -18,11 +18,15 @@ const meta = {
 type Story = StoryObj<typeof meta>
 
 export const ErrorText: Story = {
-  args: { errorText: 'Error text' },
+  args: {
+    errorText: 'Error text',
+  },
 }
 
 export const HelperText: Story = {
-  args: { helperText: 'Helper text' },
+  args: {
+    helperText: 'Helper text',
+  },
 }
 
 export default meta

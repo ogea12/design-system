@@ -10,27 +10,50 @@ const meta = {
 type Story = StoryObj<typeof meta>
 
 export const Label: Story = {
-  args: { label: 'Label', count: 4 },
+  args: {
+    label: 'Label',
+    count: 4,
+  },
 }
 
 export const DefaultValue: Story = {
-  args: { label: 'Label', defaultValue: ['1', '2', '3'], count: 4 },
+  args: {
+    label: 'Label',
+    defaultValue: ['1', '2', '3'],
+    count: 4,
+  },
 }
 
 export const Required: Story = {
-  args: { label: 'Label', required: true, count: 4 },
+  args: {
+    label: 'Label',
+    required: true,
+    count: 4,
+  },
 }
 
 export const Disabled: Story = {
-  args: { label: 'Label', disabled: true, count: 4 },
+  args: {
+    label: 'Label',
+    disabled: true,
+    count: 4,
+  },
 }
 
 export const ErrorText: Story = {
-  args: { label: 'Label', errorText: 'Error text', count: 4 },
+  args: {
+    label: 'Label',
+    errorText: 'Error text',
+    count: 4,
+  },
 }
 
 export const HelperText: Story = {
-  args: { label: 'Label', helperText: 'Helper text', count: 4 },
+  args: {
+    label: 'Label',
+    helperText: 'Helper text',
+    count: 4,
+  },
 }
 
 export default meta

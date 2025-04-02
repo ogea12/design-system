@@ -19,18 +19,35 @@ export const Label: Story = {
 }
 
 export const Required: Story = {
-  args: { label: 'Label', required: true, placeholder: 'Placeholder' },
+  args: {
+    label: 'Label',
+    required: true,
+    placeholder: 'Placeholder',
+  },
 }
+
 export const Disabled: Story = {
-  args: { label: 'Label', disabled: true, placeholder: 'Placeholder' },
+  args: {
+    label: 'Label',
+    disabled: true,
+    placeholder: 'Placeholder',
+  },
 }
 
 export const ErrorText: Story = {
-  args: { label: 'Label', errorText: 'Error text', placeholder: 'Placeholder' },
+  args: {
+    label: 'Label',
+    errorText: 'Error text',
+    placeholder: 'Placeholder',
+  },
 }
 
 export const HelperText: Story = {
-  args: { label: 'Label', helperText: 'Helper text', placeholder: 'Placeholder' },
+  args: {
+    label: 'Label',
+    helperText: 'Helper text',
+    placeholder: 'Placeholder',
+  },
 }
 
 export default meta
