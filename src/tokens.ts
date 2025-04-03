@@ -1,4 +1,6 @@
-export const colors = {
+import type { PresetWind3Theme } from 'unocss'
+
+export const colors: PresetWind3Theme['colors'] = {
   duck: {
     100: '#caedf4',
     200: '#b4dee7',
@@ -70,7 +72,7 @@ export const colors = {
   },
 }
 
-export const fontSize = {
+export const fontSize: PresetWind3Theme['fontSize'] = {
   '2xs': ['0.75rem', '100%'],
   'xs': ['0.8125rem', '120%'],
   'sm': ['0.875rem', '140%'],
